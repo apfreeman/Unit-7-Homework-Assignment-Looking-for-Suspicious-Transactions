@@ -174,6 +174,12 @@ JOIN credit_card on credit_card.card = transaction.card
 JOIN card_holder on card_holder.id = credit_card.cardholder_id
 WHERE card_holder.id = 25 
 AND  EXTRACT(MONTH FROM transaction.date) <= 6;
-
+----------------------------------------------------------------------------------------------
+--- queries for Data Analysis Challenge
+--- loading data for card holder data
+SELECT card_holder.id AS "cardholder", transaction.date AS "hour",  transaction.amount AS "amount"
+FROM transaction
+JOIN credit_card on credit_card.card = transaction.card
+JOIN card_holder on card_holder.id = credit_card.cardholder_id;
 
 
