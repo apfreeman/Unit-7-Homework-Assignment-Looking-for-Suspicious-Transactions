@@ -38,23 +38,27 @@ This report has been generated for the CFO of the firm. This report has been req
 
   * Do you see any anomalous transactions that could be fraudulent?
 
-    - **PART 1 Question 5 ANSWER:**  See query for ***Data Analysis Part 1 Question 4*** in query.sql
+    - **PART 1 Question 5 ANSWER:**  See query for ***Data Analysis Part 1 Question 5*** 91 of the top 100 highest transaction are under $100 and there is quite a low spread across these transactions. There is however 9 transactions that you would conisder outliers in this data. The amounts jump significantly from 100 to 748, then several around 1000, then up again to a maximum of 1894.
 
   * Is there a higher number of fraudulent transactions made during this time frame versus the rest of the day?
 
-    - **PART 1 Question 6 ANSWER:**  See query for ***Data Analysis Part 1 Question 4*** in query.sql
+    - **PART 1 Question 6 ANSWER:**  There are 30 potentially fraudlent transactions between 7am and 9am across all the data. See query for ***Data Analysis Part 1 Question 6a***.  There are 320 potentially fruadulent transactions between 9am and 7am See query for ***Data Analysis Part 1 Question 6b*** . If we average this out it can be concluded that there are 15 potential fraudulent transactions per hour block in the data between 7-9 am. If we average this out it can be concluded that there are 14.54 potential fraudulent transactions per hour block in the data between 9-7 am. While very close there are slightly more potentially fraudulent data occuring between 7-9am.
+    
 
   * If you answered yes to the previous question, explain why you think there might be fraudulent transactions during this time frame.
 
-    - **PART 1 Question 7 ANSWER:**  See query for ***Data Analysis Part 1 Question 4*** in query.sql
+    - **PART 1 Question 7 ANSWER:**  I believe hackers have deliberatley targetted this time of day to make fraudulent transactions as people are less likely to notice. This is generally the start of the day where people are busy potenitally getting ready to go to work etc, and are often speding money on food or travel. These transactions are also in normal hours people are awake and as such may not be as noticable as a transaction in the middle of the night when people are asleep and would think it was unusual to see a tranasaction at that time.  
+
 
 * What are the top 5 merchants prone to being hacked using small transactions?
-
-  - **PART 1 Question 8 ANSWER:**  See query for ***Data Analysis Part 1 Question 4*** in query.sql
-
+  
+  - **PART 1 Question 8 ANSWER:**  See query for ***Data Analysis Part 1 Question 8*** in query.sql. The top 5 Merchants that are prone to being hacked using small transactions are : Wood-Ramirez, Hood-Phillips, Baker Inc, Mcdaniel, Hines and Mcfarland, Hamilton-Mcfarland
+  
+  
 * Create a view for each of your queries.
 
-  - **PART 1 Question 9 ANSWER:**  See query for ***Data Analysis Part 1 Question 4*** in query.sql
+  - **PART 1 Question 9 ANSWER:**  See section ***Create VIEWS for all queries*** in query.sql
+
 
 #### Part 2:
 
@@ -63,10 +67,20 @@ Your CFO has also requested detailed trends data on specific card holders. Use t
 * The two most important customers of the firm may have been hacked. Verify if there are any fraudulent transactions in their history. For privacy reasons, you only know that their cardholder IDs are 2 and 18.
 
   * Using hvPlot, create a line plot representing the time series of transactions over the course of the year for each cardholder separately. 
+  - **PART 2 Question 1 ANSWER:**
+
+  ![Card Holder 2](Images/CardHolder_2_Transactions.PNG)
+
+  ![Card Holder 18](Images/CardHolder_18_Transactions.PNG)
   
   * Next, to better compare their patterns, create a single line plot that contains both card holders' trend data.  
+  - **PART 2 Question 2 ANSWER:**
+
+  ![Card Holder 2 and 18 ](Images/CardHolder_2_18_Transactions.PNG)
 
   * What difference do you observe between the consumption patterns? Does the difference suggest a fraudulent transaction? Explain your rationale.
+   - **PART 2 Question 3 ANSWER:** Looking at the visualisation for each card holders transactions there is a significant difference. The most notable is for cardholder 18, there appears to be lots of small transactions then at approximatley 4 week intervals there is a large transaction. This looks like fraud where a hacker is potentially doing lots of small transactions, then if this is not noticed and credit card has not been cancelled then they attempt a large transaction. This behaviour appears to continue and is repeated regularly over the period of this data set. 
+
 
 * The CEO of the biggest customer of the firm suspects that someone has used her corporate credit card without authorization in the first quarter of 2018 to pay quite expensive restaurant bills. Again, for privacy reasons, you know only that the cardholder ID in question is 25.
 
