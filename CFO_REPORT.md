@@ -86,9 +86,17 @@ Your CFO has also requested detailed trends data on specific card holders. Use t
 
   * Using Plotly Express, create a box plot, representing the expenditure data from January 2018 to June 2018 for cardholder ID 25.
   
+  - **PART 2 Question 4 ANSWER:** 
+
+  ![Card Holder 2 and 18 ](Images/CardHolder_25_Transactions.PNG)
+
   * Are there any outliers for cardholder ID 25? How many outliers are there per month?
+  - **PART 2 Question 5 ANSWER:** Looking at the transaction plots for card holder 25 between January and June it can be seen that there are several outliers. January - 1, February - 0, March 1, April - 3, May - 1, June - 3.
+
 
   * Do you notice any anomalies? Describe your observations and conclusions.
+  - **PART 2 Question 6 ANSWER:** In addition to the outliers, there is also an anolmoly in May. It can be observered that there is a significant differece in the box plot spread for May. For some reason this month had a much larger spread of typical amounts spent on this card holders card. 
+  
 
 ### Challenge
 
