@@ -106,5 +106,12 @@ Use the [challenge starter notebook](Starter_Files/challenge.ipynb) to code two 
 
 * One that uses standard deviation to identify anomalies for any cardholder.
 
+- **Challenge Question 1 ANSWER:** Below is the ouput for 3 random card holders using standard deviation to identify outliers.
+
+![Outliers Using std](Images/Challenge_outliers_std.PNG)
+
 * Another that uses interquartile range to identify anomalies for any cardholder.
 
+- **Challenge Question 2 ANSWER:** Below is the ouput for 3 random card holders using interquartile ranges to identify outliers.
+
+![Outliers Using iqr](Images/Challenge_outliers_iqr.PNG)
